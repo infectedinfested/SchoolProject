@@ -12,12 +12,12 @@ namespace SchoolProject.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class TeacherController : ControllerBase
+    public class TeachersController : ControllerBase
     {
         private readonly ITeacherRepository _repo;
         private readonly IMapper _mapper;
 
-        public TeacherController(ITeacherRepository repo, IMapper mapper)
+        public TeachersController(ITeacherRepository repo, IMapper mapper)
         {
             this._repo = repo;
             this._mapper = mapper;
