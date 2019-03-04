@@ -49,5 +49,13 @@ namespace SchoolProject.Controllers
             await _repo.SaveAll();
             return Ok();
         }
+
+        [HttpGet("{teacher}")]
+        public async Task<IActionResult> GetExcursionsByTeacher(int teacher)
+        {
+            var excursion = await _repo.GetExcursionByTeacher(teacher);
+            var dto = _mapper.Map<ExcursionDto>(excursion);
+            return Ok(dto);
+        }
     }
 }

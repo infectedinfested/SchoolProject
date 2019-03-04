@@ -7,11 +7,11 @@ using SchoolProject.Models;
 
 namespace SchoolProject.Data
 {
-    public class ExcursionRepository : IExcursionRepository
+    public class ScanRepository : IScanRepository
     {
         private readonly DataContext _context;
 
-        public ExcursionRepository(DataContext context)
+        public ScanRepository(DataContext context)
         {
             this._context = context;
         }
@@ -31,19 +31,14 @@ namespace SchoolProject.Data
             return await _context.SaveChangesAsync() > 0;
         }
 
-        public async Task<IEnumerable<Excursion>> GetExcursions()
+        public async Task<IEnumerable<Scan>> GetScans()
         {
-            return await _context.Excursions.ToListAsync();
+            return await _context.Scans.ToListAsync();
         }
 
-        public async Task<Excursion> GetExcursion(int id)
+        public async Task<Scan> GetScan(int id)
         {
-            return await _context.Excursions.FirstOrDefaultAsync(S => S.Id == id);
-        }
-
-        public async Task<Excursion> GetExcursionByTeacher(int teacher)
-        {
-            return await _context.Excursions.FirstOrDefaultAsync(S => S.TeacherId == teacher);
+            return await _context.Scans.FirstOrDefaultAsync(S => S.Id == id);
         }
     }
 }

@@ -3,14 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SchoolProject.DTOs
+namespace SchoolProject.Models
 {
-    public class ExcursionDto
+    public class Scan
     {
         public int Id { get; set; }
-        public DateTime Date { get; set; }
-        public int TeacherId { get; set; }
+        public int ExcursionId { get; set; }
+        public DateTime Time { get; set; }
         public int StudentId { get; set; }
-        public bool Present { get; set; }
     }
 }

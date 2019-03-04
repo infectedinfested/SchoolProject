@@ -5,12 +5,11 @@ using System.Threading.Tasks;
 
 namespace SchoolProject.DTOs
 {
-    public class ExcursionDto
+    public class ScanDto
     {
         public int Id { get; set; }
-        public DateTime Date { get; set; }
-        public int TeacherId { get; set; }
+        public int ExcursionId { get; set; }
+        public DateTime Time { get; set; }
         public int StudentId { get; set; }
-        public bool Present { get; set; }
     }
 }

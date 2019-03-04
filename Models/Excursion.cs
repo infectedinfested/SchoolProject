@@ -10,7 +10,7 @@ namespace SchoolProject.Models
         public int Id { get; set; }
         public DateTime Date { get; set; }
         public int TeacherId { get; set; }
-        public int StuddentId { get; set; }
-        public bool present { get; set; }
+        public List<int> StudentIds { get; set; }
+        public bool Present { get; set; }
     }
 }

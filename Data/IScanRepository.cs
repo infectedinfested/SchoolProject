@@ -6,14 +6,13 @@ using System.Threading.Tasks;
 
 namespace SchoolProject.Data
 {
-    public interface IExcursionRepository
+    public interface IScanRepository
     {
         void Add<T>(T entity) where T : class;
         void Delete<T>(T entity) where T : class;
 
         Task<bool> SaveAll();
-        Task<IEnumerable<Excursion>> GetExcursions();
-        Task<Excursion> GetExcursion(int id);
-        Task<Excursion> GetExcursionByTeacher(int teacher);
+        Task<IEnumerable<Scan>> GetScans();
+        Task<Scan> GetScan(int id);
     }
 }

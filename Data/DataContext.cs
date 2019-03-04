@@ -14,5 +14,6 @@ namespace SchoolProject.Data
         public DbSet<Student> Students { get; set; }
         public DbSet<Teacher> Teachers { get; set; }
         public DbSet<Excursion> Excursions { get; set; }
+        public DbSet<Scan> Scans { get; set; }
     }
 }
